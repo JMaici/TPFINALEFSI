@@ -5,6 +5,7 @@ import { Outlet, Link } from "react-router-dom";
 const Layout = () => {
   return (
     <>
+    
       <nav className="navbar">
         <ul className="navbar-list">
           <li className="navbar-item">
@@ -19,12 +20,13 @@ const Layout = () => {
           </li>
         </ul>
       </nav>
+      <Outlet />  
       <footer>
-        <Link to="/" className="navbar-link">
-          Home
+        <Link to="/Contacto" className="navbar-link">
+          Contacto
         </Link>
       </footer>
-      <Outlet />
+      
     </>
   );
 };
