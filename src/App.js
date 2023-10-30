@@ -8,6 +8,7 @@ import Favoritos from './components/Favoritos';
 import Contacto from './components/Contacto';
 import MisCreaciones from './components/MisCreaciones';
 import Info from './components/Info';
+import PageNotFound from './components/PageNotFound';
 //import { ProductsProvider } from "./contextState.js";
 
 function App() {
@@ -17,10 +18,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="/Favorito" element={<Favoritos />} />
+            <Route path="/Favoritos" element={<Favoritos />} />
             <Route path="/Contacto" element={<Contacto />} />
             <Route path="/Info" element={<Info />} />
             <Route path="/MisCreaciones" element={<MisCreaciones />} />
+            <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>
