@@ -9,11 +9,12 @@ import Contacto from './components/Contacto';
 import MisCreaciones from './components/MisCreaciones';
 import Info from './components/Info';
 import PageNotFound from './components/PageNotFound';
-//import { ProductsProvider } from "./contextState.js";
+import axios from 'axios';
+import { DataProvider } from "./contextState.js";
 
 function App() {
   return (
-    //<ProductsProvider>
+    <DataProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -26,7 +27,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    //</ProductsProvider>
+    </DataProvider>
   );
 }
 
