@@ -91,7 +91,7 @@
         "id": 12,
         "titulo": "rrr",
         "descripcion": "aa",
-        "imagenes": "ab",
+        "imagenes": "https://www.nit.pt/wp-content/uploads/2016/10/f29165a5-cace-484c-94df-7f508b076ba6-754x394.jpg",
         "fecha": "2019-04-14",
         "destacado": true
     },
@@ -99,7 +99,7 @@
         "id": 13,
         "titulo": "fav3",
         "descripcion": "aa",
-        "imagenes": "ab",
+        "imagenes": "https://i.kym-cdn.com/entries/icons/original/000/043/251/cover6.jpg",
         "fecha": "2019-04-14",
         "destacado": true
     },
@@ -115,7 +115,7 @@
         "id": 15,
         "titulo": "fav1",
         "descripcion": "aa",
-        "imagenes": "ab",
+        "imagenes": "https://www.marthastewart.com/thmb/sV2NwtYsn8wrIV4Rc5iYySt6pU8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/fried-chicken-waffles-102846834_0_horiz-8abd9c6a6139431195c3b54c24baf10f.jpgitokq3ofeYLu",
         "fecha": "2019-04-14",
         "destacado": true
     },

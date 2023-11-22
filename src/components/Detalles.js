@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useData } from '../contextState';
+import './Detalles.css'; // Import the new CSS file
 
 function Detalles() {
   const { id } = useParams();
@@ -9,36 +10,26 @@ function Detalles() {
   const [creacion, setCreacion] = useState(null);
 
   useEffect(() => {
-    console.log('Inside useEffect - id:', id);
-    console.log('creacionesData inside useEffect:', creacionesData);
-  
     if (creacionesData) {
       const foundCreacion = creacionesData.find((creacion) => creacion.id == id);
-      console.log('foundCreacion:', foundCreacion);
-  
       if (foundCreacion !== creacion) {
         setCreacion(foundCreacion || null);
-      } 
+      }
     }
   }, [creacionesData, id, creacion]);
-  
-  
-
-  console.log('id:', id);
-  console.log('creacionesData:', creacionesData);
-  console.log('creacion:', creacion);
 
   if (!creacion) {
-    console.log('Loading...');
     return <div>Loading...</div>;
   }
-  
 
   return (
-    <div>
+    <div className="detalles-container">
       <h2>{creacion.titulo}</h2>
-      <p>{creacion.descripcion}</p>
-      <img src={creacion.imagenes} alt={creacion.titulo} />
+      <p className="description">{creacion.descripcion}</p>
+      <p className="date">{creacion.fecha}</p>
+      <div className="image-container">
+        <img className="creacion-image" src={creacion.imagenes} alt={creacion.titulo} />
+      </div>
       {/* Add more details as needed */}
     </div>
   );

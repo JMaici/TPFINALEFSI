@@ -1,0 +1,44 @@
+/* Detalles.css */
+.detalles-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  .description {
+    color: #555;
+  }
+  
+  .date {
+    color: #777;
+  }
+  
+  .image-container {
+    overflow: hidden;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .creacion-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .creacion-image:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .detalles-container {
+      padding: 10px;
+    }
+  }
+  

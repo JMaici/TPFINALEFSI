@@ -1,45 +1,48 @@
-/* Add this CSS in your styles or create a separate CSS file */
-
 .creaciones-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 20px 0;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.creacion-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 2%;
+  width: 46%; /* Two cards per row */
+  max-width: 400px; /* Set a maximum width for larger screens */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+
+  /* Adjust styles based on your design preferences */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
   .creacion-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    margin: 2%;
-    width: 46%; /* Two cards per row */
-    max-width: 400px; /* Set a maximum width for larger screens */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-  
-    /* Adjust styles based on your design preferences */
+    width: 100%; /* Full width on smaller screens */
   }
-  
-  /* Responsive styles */
-  @media screen and (max-width: 768px) {
-    .creacion-card {
-      width: 100%; /* Full width on smaller screens */
-    }
-  }
-  
-  .creacion-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .card-content {
-    padding: 2%;
-  }
-  
-  .card-content h2 {
-    margin-bottom: 2%;
-  }
-  
-  .card-content p {
-    color: #555;
-  }
-  
+}
+
+.creacion-card:hover {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 2%;
+}
+
+.card-content h2 {
+  margin-bottom: 2%;
+}
+
+.card-content p {
+  color: #555;
+}
+
+/* Add the following styles for images */
+.creacion-card img {
+  max-width: 100%;
+  height: auto;
+}
