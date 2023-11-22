@@ -9,7 +9,7 @@ import Contacto from './components/Contacto';
 import MisCreaciones from './components/MisCreaciones';
 import Info from './components/Info';
 import PageNotFound from './components/PageNotFound';
-import axios from 'axios';
+import Detalles from './components/Detalles';
 import { DataProvider } from "./contextState.js";
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
             <Route path="/Contacto" element={<Contacto />} />
             <Route path="/Info" element={<Info />} />
             <Route path="/MisCreaciones" element={<MisCreaciones />} />
+            <Route path="/detalles/:id" element={<Detalles />} />
             <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>
