@@ -18,7 +18,7 @@ function Detalles() {
   
       if (foundCreacion !== creacion) {
         setCreacion(foundCreacion || null);
-      }
+      } 
     }
   }, [creacionesData, id, creacion]);
   
