@@ -40,7 +40,12 @@ export const FavoritesProvider = ({ children }) => {
   }, [favorites]);
 
   const addFavorite = (creacionId) => {
-    setFavorites((prevFavorites) => [...prevFavorites, creacionId]);
+    setFavorites((prevFavorites) => {
+      if (!prevFavorites.includes(creacionId)) {
+        return [...prevFavorites, creacionId];
+      }
+      return prevFavorites;
+    });
   };
 
   const removeFavorite = (creacionId) => {

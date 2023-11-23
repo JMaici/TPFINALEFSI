@@ -5,6 +5,8 @@ import { useFavorites } from '../contextState';
 import "./Layout.css";
 import Badge from "@mui/material/Badge";
 import StarIcon from "@mui/icons-material/Star";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Layout = () => {
   const { favorites } = useFavorites();
@@ -45,6 +47,14 @@ const Layout = () => {
         <Link to="/Contacto" className="navbar-link">
           Contacto
         </Link>
+        {/* LinkedIn Button */}
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="social-icon">
+          <LinkedInIcon />
+        </a>
+        {/* Instagram Button */}
+        <a href="https://www.instagram.com/_maceira" target="_blank" rel="noopener noreferrer" className="social-icon">
+          <InstagramIcon />
+        </a>
       </footer>
     </div>
   );

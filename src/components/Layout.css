@@ -48,4 +48,19 @@ body {
   position: fixed; /* Fixed positioning */
   bottom: 0;
   width: 100%;
+  display: flex;
+  justify-content: center; /* Center the social icons */
+  align-items: center;
+}
+
+/* Style for social icons */
+.social-icon {
+  color: #fff;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  opacity: 0.8;
 }

@@ -42,12 +42,12 @@ function Detalles() {
       {/* Styled and animated button to add/remove from favorites */}
       {isFavorite(creacion.id) ? (
         <button className="remove-favorite" onClick={handleRemoveFavorite}>
-          Remove from Favorites
+          Sacar de favoritos
         </button>
       ) : (
         <button className="add-favorite" onClick={handleAddFavorite}>
-          Add to Favorites
-        </button>
+          Agregar a favoritos
+        </button> 
       )}
       {/* Add more details as needed */}
     </div>

@@ -10,7 +10,7 @@ function Favoritos() {
 
   const handleRemoveFavorite = (creacionId) => {
     // Display a confirmation pop-up before removing from favorites
-    const isConfirmed = window.confirm('Are you sure you want to remove this creation from favorites?');
+    const isConfirmed = window.confirm('Estas seguro?');
 
     if (isConfirmed) {
       removeFavorite(creacionId);
@@ -19,10 +19,10 @@ function Favoritos() {
 
   return (
     <div className="favoritos-container">
-      <h1>My Favorites</h1>
+      <h1>Favoritos</h1>
       <div className="favoritos-list">
         {favorites.length === 0 ? (
-          <p>No favorite creations yet.</p>
+          <p>No hay ningun creacion en favoritos</p>
         ) : (
           favorites.map((creacionId) => {
             const creacion = creacionesData.find((creacion) => creacion.id === creacionId);
@@ -37,7 +37,7 @@ function Favoritos() {
                     <p>{creacion.descripcion}</p>
                   </div>
                 </Link>
-                <button onClick={() => handleRemoveFavorite(creacionId)}>Remove from Favorites</button>
+                <button onClick={() => handleRemoveFavorite(creacionId)}>Sacar de favoritos</button>
               </div>
             );
           })

@@ -9,7 +9,7 @@ const Info = () => {
         <strong>Nombre Completo:</strong> <span className="custom-link">Joaquin Maceira</span>
       </p>
       <p>
-        <strong>Edad:</strong> <span className="custom-link">17</span>
+        <strong>Edad:</strong> <a href="https://es.wikipedia.org/wiki/17" className="custom-link">17</a>
       </p>
       <p>
         <strong>Ubicación:</strong> <a href="https://www.google.com/maps/place/Buenos+Aires" className="custom-link">Buenos Aires</a>
