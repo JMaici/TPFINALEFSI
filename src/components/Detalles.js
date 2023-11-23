@@ -1,12 +1,13 @@
 // Detalles.js
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { useData } from '../contextState';
-import './Detalles.css'; // Import the new CSS file
+import { useData, useFavorites } from '../contextState';
+import './Detalles.css'; // Import the CSS file
 
 function Detalles() {
   const { id } = useParams();
   const { creacionesData } = useData();
+  const { isFavorite, addFavorite, removeFavorite } = useFavorites();
   const [creacion, setCreacion] = useState(null);
 
   useEffect(() => {
@@ -22,6 +23,14 @@ function Detalles() {
     return <div>Loading...</div>;
   }
 
+  const handleAddFavorite = () => {
+    addFavorite(creacion.id);
+  };
+
+  const handleRemoveFavorite = () => {
+    removeFavorite(creacion.id);
+  };
+
   return (
     <div className="detalles-container">
       <h2>{creacion.titulo}</h2>
@@ -30,6 +39,16 @@ function Detalles() {
       <div className="image-container">
         <img className="creacion-image" src={creacion.imagenes} alt={creacion.titulo} />
       </div>
+      {/* Styled and animated button to add/remove from favorites */}
+      {isFavorite(creacion.id) ? (
+        <button className="remove-favorite" onClick={handleRemoveFavorite}>
+          Remove from Favorites
+        </button>
+      ) : (
+        <button className="add-favorite" onClick={handleAddFavorite}>
+          Add to Favorites
+        </button>
+      )}
       {/* Add more details as needed */}
     </div>
   );

@@ -1,11 +1,14 @@
 // Layout.js
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
+import { useFavorites } from '../contextState';
 import "./Layout.css";
 import Badge from "@mui/material/Badge";
 import StarIcon from "@mui/icons-material/Star";
 
 const Layout = () => {
+  const { favorites } = useFavorites();
+
   return (
     <div className="layout">
       <nav className="navbar">
@@ -28,7 +31,7 @@ const Layout = () => {
           <li className="navbar-item">
             <Link to="/Favoritos" className="navbar-link">
               Favoritos
-              <Badge badgeContent={4} color="error">
+              <Badge badgeContent={favorites.length} color="success">
                 <StarIcon />
               </Badge>
             </Link>
