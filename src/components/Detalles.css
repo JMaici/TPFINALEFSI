@@ -1,110 +1,74 @@
-/* Favoritos.css */
-.favoritos-container {
+/* Detalles.css */
+
+.detalles-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
 }
 
-.favoritos-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+.creacion-image {
+  width: 100%;
+  height: auto;
   margin-top: 20px;
-}
-
-.favorito-card {
-  border: 1px solid #ddd;
   border-radius: 8px;
-  overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 }
 
-.favorito-card img {
-  width: 100%;
-  height: auto;
+.creacion-image:hover {
+  transform: scale(1.1);
 }
 
-.card-content {
-  padding: 15px;
-}
-
-.card-content h2 {
+h2 {
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
-.card-content p {
+.description {
   color: #555;
+  font-size: 16px;
+  margin-bottom: 15px;
 }
 
-button {
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  outline: none;
-}
-.remove-favorite{
-  background-color: #f44336;
-}
-.add-favorite{
-  background-color: #48db04;
-}
-button:hover {
-  background-color: #0a0eff;
+.date {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 20px;
 }
 
-/* Stylish Pop-up for Confirmation */
-.confirmation-popup {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #2c3e50;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  z-index: 999;
-  color: #ecf0f1;
-}
-
-.confirmation-popup p {
-  margin: 0 0 20px;
-}
-
-.confirmation-popup button {
+/* Styled and animated button to add/remove from favorites */
+.add-favorite,
+.remove-favorite {
   background-color: #3498db;
   color: white;
   border: none;
-  padding: 10px 15px;
+  padding: 12px 20px;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s ease-in-out;
   outline: none;
+  margin-top: 20px;
 }
 
-.confirmation-popup button:hover {
+.remove-favorite {
+  background-color: #e74c3c;
+}
+
+.add-favorite:hover,
+.remove-favorite:hover {
   background-color: #2980b9;
+  transform: scale(1.05);
 }
 
-.overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 998;
+/* GitHub button styling */
+.github-icon {
+  color: #333;
+  margin-top: 10px;
+  transition: color 0.3s, transform 0.3s ease-in-out;
 }
 
-/* Animation for the confirmation pop-up */
-.show-popup .confirmation-popup {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-}
-
-.show-overlay .overlay {
-  display: block;
+.github-icon:hover {
+  color: #000;
+  transform: scale(1.1);
 }

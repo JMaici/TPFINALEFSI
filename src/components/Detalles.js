@@ -2,7 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useData, useFavorites } from '../contextState';
-import './Detalles.css'; // Import the CSS file
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import './Detalles.css';
 
 function Detalles() {
   const { id } = useParams();
@@ -49,6 +51,10 @@ function Detalles() {
           Agregar a favoritos
         </button> 
       )}
+      {/* GitHub button */}
+      <a href={creacion.githubLink} target="_blank" rel="noopener noreferrer">
+        <FontAwesomeIcon icon={faGithub} size="2x" className="github-icon" />
+      </a>
       {/* Add more details as needed */}
     </div>
   );

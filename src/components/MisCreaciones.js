@@ -1,8 +1,8 @@
 // MisCreaciones.js
-import React from 'react';
-import { useData } from '../contextState';
-import { Link } from 'react-router-dom';
-import './MisCreaciones.css'; // Import the new CSS file
+import React from "react";
+import { useData } from "../contextState";
+import { Link } from "react-router-dom";
+import "./MisCreaciones.css"; // Import the new CSS file
 
 function MisCreaciones() {
   const { creacionesData } = useData();
@@ -21,7 +21,9 @@ function MisCreaciones() {
             {/* Use Link from React Router to navigate to detalles page */}
             <Link to={`/detalles/${creacion.id}`}>
               {/* Render card with title, description, and image */}
-              <img src={creacion.imagenes} alt={creacion.titulo} />
+              <div>
+                <img src={creacion.imagenes} alt={creacion.titulo} />
+              </div>
               <div className="card-content">
                 <h2>{creacion.titulo}</h2>
                 <p>{creacion.descripcion}</p>
