@@ -1,4 +1,4 @@
-/* CSS for the Layout */
+/* Layout.css */
 body {
   margin: 0;
   display: flex;
@@ -10,6 +10,11 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #fff; /* Set the default background color */
+}
+
+.layout.dark-mode {
+  background-color: #2d2d2d; /* Set the dark mode background color */
 }
 
 .navbar {
@@ -35,6 +40,16 @@ body {
   font-size: 16px;
 }
 
+/* Add this style to ensure the toggle button is aligned with the navbar */
+.navbar-item:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.dark-mode-toggle {
+  cursor: pointer;
+}
+
 .content {
   flex: 1; /* Allows content to take up available space */
   padding: 20px; /* Add padding as needed */
@@ -45,7 +60,6 @@ body {
   color: #fff;
   text-align: center;
   padding: 10px 0;
-  position: fixed; /* Fixed positioning */
   bottom: 0;
   width: 100%;
   display: flex;

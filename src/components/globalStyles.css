@@ -1,0 +1,35 @@
+/* globalStyles.css */
+body {
+    font-family: 'Arial', sans-serif; /* Set your desired font-family */
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .dark-mode body {
+    background-color: #1e1e1e; /* Dark mode background color */
+    color: #fff; /* Dark mode text color */
+  }
+  /* globalStyles.css */
+body {
+    font-family: 'Arial', sans-serif; /* Set your desired font-family */
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .dark-mode body {
+    background-color: #1e1e1e; /* Dark mode background color */
+    color: #fff; /* Dark mode text color */
+  }
+  
+  /* Apply dark mode styles to specific elements */
+  .dark-mode h1,
+  .dark-mode h2,
+  .dark-mode h3,
+  .dark-mode p{
+    color: #fff; /* Dark mode text color for specific elements */
+  }
+  
+  /* Add more global styles as needed */
+  
+  /* Add more global styles as needed */
+  

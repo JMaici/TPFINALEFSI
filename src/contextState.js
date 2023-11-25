@@ -4,6 +4,7 @@ import axios from 'axios';
 
 const DataContext = createContext();
 const FavoritesContext = createContext();
+const DarkModeContext = createContext(); // Add Dark Mode context
 
 export const DataProvider = ({ children }) => {
   const [creacionesData, setCreacionesData] = useState(null);
@@ -19,7 +20,9 @@ export const DataProvider = ({ children }) => {
   return (
     <DataContext.Provider value={{ creacionesData }}>
       <FavoritesProvider>
-        {children}
+        <DarkModeProvider>{/* Include Dark Mode provider */}
+          {children}
+        </DarkModeProvider>
       </FavoritesProvider>
     </DataContext.Provider>
   );
@@ -63,4 +66,29 @@ export const FavoritesProvider = ({ children }) => {
 
 export const useFavorites = () => {
   return useContext(FavoritesContext);
+};
+
+export const DarkModeProvider = ({ children }) => {
+  const [darkMode, setDarkMode] = useState(() => {
+    const storedDarkMode = localStorage.getItem('darkMode');
+    return storedDarkMode ? JSON.parse(storedDarkMode) : false;
+  });
+
+  const toggleDarkMode = () => {
+    setDarkMode((prevMode) => !prevMode);
+  };
+
+  useEffect(() => {
+    localStorage.setItem('darkMode', JSON.stringify(darkMode));
+  }, [darkMode]);
+
+  return (
+    <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>
+      {children}
+    </DarkModeContext.Provider>
+  );
+};
+
+export const useDarkMode = () => {
+  return useContext(DarkModeContext);
 };

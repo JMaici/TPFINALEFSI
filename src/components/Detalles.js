@@ -52,9 +52,11 @@ function Detalles() {
         </button> 
       )}
       {/* GitHub button */}
-      <a href={creacion.githubLink} target="_blank" rel="noopener noreferrer">
-        <FontAwesomeIcon icon={faGithub} size="2x" className="github-icon" />
-      </a>
+      {creacion.link && creacion.link.trim() !== '' && (
+        <a href={creacion.link} target="_blank" rel="noopener noreferrer" className="github-link">
+          <FontAwesomeIcon icon={faGithub} size="2x" className="github-icon" />
+        </a>
+      )}
       {/* Add more details as needed */}
     </div>
   );
